@@ -29,3 +29,10 @@ docker-compose exec {CONTAINER_NAME} bash (ssh to container)
 ## Part 3
 
 * php container
+* docker monitoring
+* burn test
+
+https://github.com/google/cadvisor
+```
+docker run -d --name=cadvisor -p 8000:8080 --volume=/var/run:/var/run:rw --volume=/sys:/sys:ro --volume=/var/lib/docker/:/var/lib/docker:ro google/cadvisor:latest
+```
