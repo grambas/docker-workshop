@@ -14,3 +14,13 @@ services:
       - "8080:8080"
     expose:
       - 8080
+
+  php_app:
+    image: php:7.3.29-apache
+    container_name: php_app
+    volumes:
+      - ./php-app/:/var/www/html/
+    ports:
+      - "8081:80"
+    stdin_open: true
+    tty: true
