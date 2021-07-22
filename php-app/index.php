@@ -2,7 +2,7 @@
 
 $data = [
     'status' => 'ok',
-    'time' => date("Y/m/d H:m:s"),
+    'time' => date("Y/m/d H:i:s"),
     'memcached_version' => phpversion('memcached'),
 ];
 
