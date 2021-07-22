@@ -5,9 +5,10 @@
   "author": "Mindaugas Milius <miliust@eventit.ag>",
   "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "dependencies": {
-    "express": "^4.16.1"
+    "express": "^4.16.1",
+    "nodemon": "^2.0.12"
   }
 }
