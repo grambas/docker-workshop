@@ -46,3 +46,7 @@ docker run -d --name=cadvisor -p 8000:8080 --volume=/var/run:/var/run:rw --volum
 ```
 docker-compose exec node_app npm install axios
 ```
+
+## Part 5
+
+* PHP container with memcached lib and composer

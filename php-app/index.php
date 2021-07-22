@@ -3,6 +3,7 @@
 $data = [
     'status' => 'ok',
     'time' => date("Y/m/d H:m:s"),
+    'memcached_version' => phpversion('memcached'),
 ];
 
 if (isset($_GET['test'])) {

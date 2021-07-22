@@ -18,7 +18,9 @@ services:
       - 8080
 
   php_app:
-    image: php:7.3.29-apache
+    build:
+      context: .
+      dockerfile: docker/php-app/Dockerfile
     container_name: php_app
     volumes:
       - ./php-app/:/var/www/html/
