@@ -26,3 +26,6 @@ docker-compose exec {CONTAINER_NAME} bash (ssh to container)
   docker-compose restart node_app
 ```
 
+## Part 3
+
+* php container
