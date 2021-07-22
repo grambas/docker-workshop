@@ -50,3 +50,11 @@ docker-compose exec node_app npm install axios
 ## Part 5
 
 * PHP container with memcached lib and composer
+
+
+## Part 6
+
+* start independent memcached service
+* create external network
+* link php container and memcached container in created network
+* use memcached service in php container

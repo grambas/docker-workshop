@@ -28,3 +28,10 @@ services:
       - "8081:80"
     stdin_open: true
     tty: true
+    networks:
+      - workshop-network
+
+networks:
+  workshop-network:
+    external: false
+    name: workshop-network
