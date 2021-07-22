@@ -11,5 +11,6 @@
 * update node application on change
 ```
   docker-compose exec node_app npm install nodemon --also=dev
+  docker-compose restart node_app
 ```
 
