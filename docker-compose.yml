@@ -16,6 +16,8 @@ services:
       - "8080:8080"
     expose:
       - 8080
+    networks:
+      - workshop-network
 
   php_app:
     build:

@@ -16,7 +16,9 @@ app.get('/', (req, res) => {
         // handle success
           console.log(response.data);
           res.send(
-            'PHP Status: ' + response.data.status + '<br>' + 'PHP time: ' + response.data.time
+            'PHP Status: ' + response.data.status + '<br>' +
+              'PHP time: ' + response.data.time + '<br>' +
+              'Memcached version: ' + response.data.memcached_version
         );
         res.send();
       })
