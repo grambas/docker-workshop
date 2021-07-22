@@ -6,10 +6,28 @@ const express = require('express');
 const PORT = 8080;
 const HOST = '0.0.0.0';
 
+const axios = require('axios')
+
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  axios.get('http://php_app')
+      .then(function (response) {
+        // handle success
+          console.log(response.data);
+          res.send(
+            'PHP Status: ' + response.data.status + '<br>' + 'PHP time: ' + response.data.time
+        );
+        res.send();
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+
 });
 
 app.listen(PORT, HOST);

@@ -10,6 +10,8 @@ services:
     volumes:
       - ./node-app:/usr/src/app:cached
       - /usr/src/app/node_modules
+    depends_on:
+      - php_app
     ports:
       - "8080:8080"
     expose:
