@@ -12,5 +12,4 @@ RUN pecl install memcached && docker-php-ext-enable memcached
 
 # Install composer
 RUN curl -fsSL https://getcomposer.org/installer | php \
-    && mv composer.phar /usr/local/bin/composer \
-    && composer global require phpunit/phpunit ^8.0 --no-progress --no-scripts --no-interaction \
+    && mv composer.phar /usr/local/bin/composer
