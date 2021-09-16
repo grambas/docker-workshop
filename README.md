@@ -1,5 +1,8 @@
 # Docker workshop
 
+## Pre-Request
+* Docker and docker-compose installed
+
 ## Part 1
 
 * First Dockerfile
