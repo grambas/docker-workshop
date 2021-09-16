@@ -12,7 +12,7 @@ services:
       - ./node-app:/usr/src/app:cached
       - node_app_modules:/usr/src/app/node_modules
     ports:
-      - "8080:8080"
+      - "8060:8080"
     expose:
       - 8080
 #    stdin_open: true
