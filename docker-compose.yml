@@ -3,26 +3,30 @@ version: '3.7'
 services:
   node_app:
     container_name: node_app
-    build:
-      context: .
-      dockerfile: docker/node-app/Dockerfile
+    image: test-image:latest
     command: bash -c "npm ci && npm start"
     volumes:
       - ./node-app:/usr/src/app:cached
-      - /usr/src/app/node_modules
+      - node_app_modules:/usr/src/app/node_modules
     depends_on:
       - php_app
     ports:
-      - "8080:8080"
+      - "8060:8080"
     expose:
       - 8080
+    stdin_open: true
+    tty: true
 
   php_app:
+#    build:
+#      context: .
+#      dockerfile: docker/php-app/Dockerfile
     image: php:7.3.29-apache
     container_name: php_app
     volumes:
       - ./php-app/:/var/www/html/
     ports:
-      - "8081:80"
-    stdin_open: true
-    tty: true
+      - "8061:80"
+
+volumes:
+  node_app_modules:
