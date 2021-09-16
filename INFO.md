@@ -27,4 +27,5 @@ docker-compose up -d (start in daemon)
 docker-compose down
 docker-compose down -v (recreate named volumes)
 docker-compose exec {SERVICE_NAME} /bin/bash (ssh to container)
+docker stats (docker statistic info)
 ```

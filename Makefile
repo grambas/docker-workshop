@@ -14,4 +14,7 @@ rr: ## restart services
 node-bash: ## ssh to node app
 	docker-compose exec node_app /bin/bash
 
-.PHONY: help reset start  node-bash rr
+php-bash: ## ssh to php app
+	docker-compose exec php_app /bin/bash
+
+.PHONY: help reset start rr node-bash php-bash

@@ -6,18 +6,6 @@
 * Dockerfile's management with docker-compose
 * hello word node application
 
-```
-docker ps (show running containers)
-docker ps -a (show all existing containers)
-docker logs {CONTAINER_NAME} 
-docker logs -f {CONTAINER_NAME} (tail)
-docker-compose up
-docker-compose up -d (start in daemon)
-docker-compose down
-docker-compose down -v (recreate named volumes)
-docker-compose exec {CONTAINER_NAME} bash (ssh to container)
-```
-
 ## Part 2
 
 * update node application on changes
@@ -34,18 +22,11 @@ or
   docker-compose restart node_app
 ```
 
-## Part 2
-
-* update node application on change
-```
-  docker-compose exec node_app npm install nodemon --also=dev
-  docker-compose restart node_app
-```
-
 ## Part 3
 
-* php container
-* docker monitoring
+* run basic php container
+* run php container from Dockerfile with composer
+* docker monitoring with cadvisor
 * burn test
 
 https://github.com/google/cadvisor
