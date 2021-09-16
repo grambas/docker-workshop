@@ -1,5 +1,8 @@
 # Docker workshop
 
+## Pre-Request
+* Docker and docker-compose installed
+
 ## Part 1
 
 * First Dockerfile
@@ -9,7 +12,7 @@
 ## Part 2
 
 * update node application on changes
- 
+
 ```
   docker-compose exec node_app /bin/bash
   npm install nodemon --also=dev
@@ -33,3 +36,4 @@ https://github.com/google/cadvisor
 ```
 docker run -d --name=cadvisor -p 8000:8080 --volume=/var/run:/var/run:rw --volume=/sys:/sys:ro --volume=/var/lib/docker/:/var/lib/docker:ro google/cadvisor:latest
 ```
+
