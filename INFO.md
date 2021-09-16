@@ -28,3 +28,11 @@ docker-compose down
 docker-compose down -v (recreate named volumes)
 docker-compose exec {SERVICE_NAME} /bin/bash (ssh to container)
 ```
+
+## Docker volume cache strategy explained:
+
+* Use cached: when the host performs changes, the container is in read only mode.
+  * The host’s view of the mount is authoritative. There may be delays before updates made on the host are visible within a container. When you use it? For example when your host continuously changes data that the container service reads and uses it ( like configuration / source code / rendered data from server etc ...)
+* Use delegated: when docker container performs changes, host is in read only mode.
+  * The container runtime’s view of the mount is authoritative. There may be delays before updates made in a container are visible on the host. When you use it? For example You use it when the container changes the data continuously and you want to backup this data on the host, this is read only operation on host perspective and therefore the right choice would be delegated.
+* Use default: When both container and host actively and continuously perform changes on data.
