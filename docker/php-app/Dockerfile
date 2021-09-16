@@ -1,4 +1,4 @@
-FROM php:7.3-fpm
+FROM php:7.3.29-apache
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     git wget zip unzip
