@@ -6,11 +6,17 @@ services:
     build:
       context: .
       dockerfile: docker/node-app/Dockerfile
+#    image: test-image:latest
     command: bash -c "npm ci && npm start"
     volumes:
       - ./node-app:/usr/src/app:cached
-      - /usr/src/app/node_modules
+      - node_app_modules:/usr/src/app/node_modules
     ports:
       - "8080:8080"
     expose:
       - 8080
+#    stdin_open: true
+#    tty: true
+
+volumes:
+  node_app_modules:
